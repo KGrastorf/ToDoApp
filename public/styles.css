@@ -1,0 +1,26 @@
+body {
+  background-image: url("puppy1.jpg");
+  height: 100%;
+}
+
+header {
+  text-align: center;
+  background-image: url("https://gradeslam.org/blog_images/149/cover.jpg");
+  border: 2px solid orange;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+h1 {
+  color: orange;
+}
+
+.display {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  font-size: 30px;
+}

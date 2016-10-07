@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>To Do List</title>
+</head>
+
+<body ng-controller="mainCtrl">
+    <header>
+        <h1><strike>To Do </strike>..."maybe tomorrow" List</h1>
+        <form ng-input="input in todo" class="text">
+            <input ng-model="input.task" type="text">
+            <button type="input">Add to list</button>
+        </form>
+    </header>
+    <div class="display">
+        <button type="button" ng-click="sorter='+task'">Ascending</button>
+        <!-- can sort by '+key' also -->
+        <button type="button" ng-click="sorter='-task'">Descending</button>
+        <br />
+        <ul>
+            <div ng-repeat="thing in todo | orderBy: sorter | filter: filterer">
+                <li ng-hide="updatething" ng-dblclick="updatething = true">{{thing.task}}</li>
+                <form ng-show="updatething" ng-submit="updatething = false">
+                    <input type="text" ng-model="thing.task">
+                </form>
+            </div>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+    <script src="mainServ.js"></script>
+</body>
+
+</html>
