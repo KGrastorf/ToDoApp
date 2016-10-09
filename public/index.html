@@ -23,7 +23,7 @@
         <br />
         <div ng-repeat="todo in todo | orderBy: thing | filter: filterer">
             <h3 class="box">
-              <button type="button" ng-click="deleteTodo(todo)">Delete</button>
+              <button type="button" ng-click="deleteTodo(todo)">X</button>
               <form ng-submit="changeTodo(todo)">
                 <input ng-show="focused" type="text" ng-model="todo.description">
               </form>
